@@ -7,8 +7,8 @@ Under spiced/code, a script by the name 'task_methods.py' contains the DataProce
 The class contains all methods used to fullfill the tasks.
 Implementation of the class methods is done under the 'main.py' script found in this directory
 The main.py script is self-explanatory. It contains comments on what is going on.
-Your comments and detailed assessment are most welcome.
 No virtual enviroment has been created for this project.
 Requirements: Latest Anaconda distribution
 To generate results at once, type 'python main.py' without quotes
+Your comments and detailed feedback are most welcome.
 
