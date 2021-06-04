@@ -17,20 +17,32 @@ data_processing_obj = DataProcessing(filename=filename, save_directory=save_dire
 
 # Task 1: Read x/y data points and save results to table
 table = data_processing_obj.read_data()
+print("")
+print("=====Task 1 result=====")
 print(table)
+print("")
 
 # Task 2: Create a scatter plot and save the image to results folder
 data_processing_obj.create_scatter_plot()
+print("")
+print("=====Task 2 scatter plot to be found under results folder=====")
+print("")
 
 # Task 3: Set slope to 10 and intercept to 0 and calculate y
 updated_table = data_processing_obj.calculate_y_given_x(a=10, b=0)
 y = updated_table["y"].tolist()
-print(y)
+print("")
+print("=====Task 3 result=====")
+print({"y":y})
+print("")
 
 # Task 4: Calculate the mean squared error (MSE) of y and y_true
 y_true = updated_table["y_true"].tolist()
 mse = data_processing_obj.calculate_mse(y=y, y_true=y_true)
-print(mse)
+print("")
+print("=====Task 4 result=====")
+print({"mse": mse})
+print("")
 
 # Task 5 and 6 combined: Find value of a and b that gives the lowest possible mse.
 # We shall write a function first that can switch between task 5 and task 6
@@ -93,11 +105,17 @@ def find_minimum_mse(a, b, increment = -0.1, task_5 = True):
 
 # Task 5: result
 min_mse = find_minimum_mse(a = 10, b = 0, task_5 = True)
+print("")
+print("===== Task 5 result ======")
 print(min_mse)
+print("")
 
 # Task 6: result
 min_mse = find_minimum_mse(a = 10, b = 0, task_5 = False) 
+print("")
+print("===== Task 6 result =====")
 print(min_mse)
+print("")
 
 # Task 7: How could the algorithm be improved.
 # By using a package that has a lower language implementation to speed up the iteration
