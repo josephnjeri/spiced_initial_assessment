@@ -1,11 +1,10 @@
 """ 
 This file main.py contains answers to 
 tasks 1 - 7.It first imports methods of class 
-DataProcessing in the code package to fulfill
-its tasks
+DataProcessing to fulfill its tasks
 """
 
-from spiced.code.task_functions import DataProcessing
+from spiced.code.task_methods import DataProcessing
 
 # Get data file path
 filename = "spiced/data/datapoints.csv"
