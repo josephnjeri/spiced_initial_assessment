@@ -1,5 +1,5 @@
 """ 
-This file main.py contains answers to 
+This script file contains answers to 
 tasks 1 - 7.It first imports methods of class 
 DataProcessing to fulfill its tasks
 """
