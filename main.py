@@ -1,7 +1,7 @@
 """ 
 This file main.py contains answers to 
-tasks 1 - 7.It first imports supporting 
-functions in the code package to fulfill
+tasks 1 - 7.It first imports methods of class 
+DataProcessing in the code package to fulfill
 its tasks
 """
 
@@ -85,7 +85,12 @@ def find_minimum_mse(a, b, increment = -0.1, task_5 = True):
         i += 1
 
     # We have the lowest possible mse and corresponding values of a and b
-    return {"mse": stored_mse, "a": stored_a, "b": stored_b}
+    result = {
+                "mse": stored_mse, 
+                "a": stored_a, 
+                "b": stored_b
+        }
+    return result
 
 # Task 5: result
 min_mse = find_minimum_mse(a = 10, b = 0, task_5 = True)
