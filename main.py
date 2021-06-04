@@ -42,6 +42,7 @@ def find_minimum_mse(a, b, increment = -0.1, task_5 = True):
     a or both a and b
     param a: slope
     param b: intercept
+    increment: a value by which a/b decreases by per iteration
     task_5: Boolean. if False, perform task 6
     return: dictionary of mse, a and b
     """
@@ -52,7 +53,7 @@ def find_minimum_mse(a, b, increment = -0.1, task_5 = True):
         # Recalculate y
         if task_5: # b set to zero
             running_table = data_processing_obj.calculate_y_given_x(a=a, b=0)
-        else: # b must be incremented
+        else: # b must be incremented under task 6
             running_table = data_processing_obj.calculate_y_given_x(a=a, b=b)
         y = running_table["y"]
         y_true = running_table["y_true"]
@@ -60,14 +61,15 @@ def find_minimum_mse(a, b, increment = -0.1, task_5 = True):
         # calculate new_mse
         new_mse = data_processing_obj.calculate_mse(y=y, y_true=y_true)
 
-        # Capture this new_mse and a at the first iteration and store
+        # Capture this new_mse, a and b at the first iteration and store them
         if i == 0:
             stored_mse = new_mse
             stored_a = a
             stored_b = b
         
-        # for rest of iterations, discard stored_mse if larger than new_mse
-        # otherwise keep it
+        # for rest of iterations, assign stored_mse to the
+        # calculated new_mse if the latter is less than 
+        # than the stored value, otherwise discard it!
         else:
             if new_mse < stored_mse:
                 stored_mse = new_mse
