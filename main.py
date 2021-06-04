@@ -18,21 +18,21 @@ data_processing_obj = DataProcessing(filename=filename, save_directory=save_dire
 # Task 1: Read x/y data points and save results to table
 table = data_processing_obj.read_data()
 print("")
-print("=====Task 1 result=====")
+print("===== Task 1 result =====")
 print(table)
 print("")
 
 # Task 2: Create a scatter plot and save the image to results folder
 data_processing_obj.create_scatter_plot()
 print("")
-print("=====Task 2 scatter plot to be found under results folder=====")
+print("===== Task 2 scatter plot to be found under results folder =====")
 print("")
 
 # Task 3: Set slope to 10 and intercept to 0 and calculate y
 updated_table = data_processing_obj.calculate_y_given_x(a=10, b=0)
 y = updated_table["y"].tolist()
 print("")
-print("=====Task 3 result=====")
+print("===== Task 3 result =====")
 print({"y":y})
 print("")
 
@@ -40,7 +40,7 @@ print("")
 y_true = updated_table["y_true"].tolist()
 mse = data_processing_obj.calculate_mse(y=y, y_true=y_true)
 print("")
-print("=====Task 4 result=====")
+print("===== Task 4 result =====")
 print({"mse": mse})
 print("")
 
@@ -118,8 +118,10 @@ print(min_mse)
 print("")
 
 # Task 7: How could the algorithm be improved.
-# By using a package that has a lower language implementation to speed up the iteration
-# e.g linear_model function from sklearn
+print("")
+print("====== Task 7 results =====")
+print("This Algorithm can be improved by using \na package/module that has a lower language\nimplementation to speed up the iteration \ne.g linear_model method from sklearn")
+print("===== End of results =====")
 
 
     
