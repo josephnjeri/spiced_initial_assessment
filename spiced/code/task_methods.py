@@ -28,7 +28,7 @@ def round(x, dplaces):
 
 
     
-class DataProcessing:
+class Factory:
     """
     This class is meant to process x,y data provided 
     under data folder and perform the tasks requested 

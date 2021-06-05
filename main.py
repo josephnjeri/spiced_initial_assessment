@@ -4,7 +4,7 @@ tasks 1 - 7.It first imports methods of class
 DataProcessing to fulfill its tasks
 """
 
-from spiced.code.task_methods import DataProcessing
+from spiced.code.task_methods import Factory
 
 # Get data file path
 filename = "spiced/data/datapoints.csv"
@@ -13,7 +13,7 @@ filename = "spiced/data/datapoints.csv"
 save_directory = "spiced/results"
 
 # Create data processing object
-data_processing_obj = DataProcessing(filename=filename, save_directory=save_directory)
+data_processing_obj = Factory(filename=filename, save_directory=save_directory)
 
 # Task 1: Read x/y data points and save results to table
 table = data_processing_obj.read_data()
